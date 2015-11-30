@@ -6,13 +6,7 @@ object Solution {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution*/
         val N = StdIn.readShort()
         val nums = StdIn.readLine().split(" ").reverse
-
-        def reverseList(arr: Array[String]) = {
-          for (i <- 0 until arr.length) {
-              print(arr(i)+" ")
-          }
-        }
-        reverseList(nums)
+        println(nums.mkString(" "))
     }
 }
 
