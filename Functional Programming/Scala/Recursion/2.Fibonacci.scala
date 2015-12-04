@@ -1,5 +1,4 @@
 object Solution {
-
      def fibonacci(x:Int):Int = {
       // Fill Up this function body
         @annotation.tailrec
@@ -9,11 +8,9 @@ object Solution {
          }
          go(x,0,1)
      }
-
     def main(args: Array[String]) {
          /** This will handle the input and output**/
          println(fibonacci(readInt()))
-
     }
 }
 
