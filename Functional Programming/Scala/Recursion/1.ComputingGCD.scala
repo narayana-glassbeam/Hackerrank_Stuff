@@ -26,17 +26,8 @@ object Solution {
 //other way
      def gcd(x: Int, y: Int): Int =
    {
-      // You only need to fill up this function
-        // To return the value of the GCD of x and y
-       if(y == 0){
-             return x;
-         }
-         else{
-             return gcd(y, x%y);
-         }
-
-
-
+       if(y == 0) x
+       else gcd(y, x%y);
    }
 
 /*
