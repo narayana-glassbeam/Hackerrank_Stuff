@@ -51,7 +51,7 @@ def main(args: Array[String]) {
     println()
   }
 
-//very interesting, using grouped (nice)
+//very interesting, using .grouped (nice)
 def solve(s: String): String = {
     s.grouped(2).map(_.reverse).mkString
   }
@@ -64,7 +64,7 @@ def solve(s: String): String = {
     }
   }
 
-//also a great solution
+//also a great solution  (actually the best one)
  def main(args: Array[String]) {
       val lines = io.Source.stdin.getLines.drop(1).toList.foreach { line =>
           println(swap(line))
