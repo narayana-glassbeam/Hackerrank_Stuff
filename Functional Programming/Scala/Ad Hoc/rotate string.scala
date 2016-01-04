@@ -38,3 +38,8 @@ Constraints
 1 ≤ T ≤ 10
 1 ≤ n ≤ 102
 S will consist of lower case latin character, [′a′…′z′] only.*/
+
+//this is also interesting
+var s = readLine().toList
+      for (i <- 0 until s.size) {
+        s = s.tail ::: List[Char](s.head)
