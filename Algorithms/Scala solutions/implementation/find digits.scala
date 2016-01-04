@@ -1,21 +1,14 @@
 object Solution {
 
-    def main(args: Array[String]) {
-        var T = readInt
-        while(T > 0){
+   def main(args: Array[String]) {
+        for (_ <- 0 until readInt) {
             var n = readLine
             println(findDigit(n))
-            T -= 1
         }
     }
-
     def findDigit(num: String): Int = {
-        var counter = 0
-        for (c <- num) {
-            if (c.asDigit != 0 && num.toInt%c.asDigit==0)counter += 1
+            num.count(c => (c.asDigit != 0 && num.toInt%c.asDigit==0))
         }
-        counter
-    }
 }
 
 /*Problem Statement
@@ -35,3 +28,22 @@ Constraints
 Output Format
 
 For every test case, count and print (on a new line) the number of digits in N that are able to evenly divide N.*/
+
+
+//my longer solution
+ def findDigit(num: String): Int = {
+        var counter = 0
+        for (c <- num) {
+            if (c.asDigit != 0 && num.toInt%c.asDigit==0)counter += 1
+        }
+        counter
+    }
+
+//other solutions
+object Solution extends App {
+    Range(0, readInt()).foreach{ _ =>
+        val n = readLine()
+        val v = n.toLong
+        println(n.map(_.asDigit).filter(_ != 0).count(el => v % el == 0))
+    }
+}
