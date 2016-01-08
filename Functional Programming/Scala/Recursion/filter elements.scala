@@ -20,6 +20,28 @@ object Solution {
     }
 }
 
+//much faster implementation (though no recursion)
+object Solution {
+    def main(args: Array[String]) {
+        for (_ <- 0 until readInt) {
+            val K = readLine.split(' ').last.toInt
+            val nums = readLine.split(' ').map(_.toInt)
+            val grouped: Map[Int, Array[Int]] = nums.groupBy(x => x)
+            val result = nums.distinct.filter(s => grouped(s).size >= K)
+            println(if (result.isEmpty) "-1" else result.mkString(" "))
+        }
+    }
+}
+
+//honorable mention
+val wanted = nums.groupBy(identity).filter(_._2.size >= K).keySet
+val result = nums.distinct.filter(wanted)
+println(if (result.isEmpty) "-1" else result.mkString(" "))
+
+//another
+val result = nums.zipWithIndex.groupBy(_._1).filter(_._2.length >= K).map{ case (x,y) => (x,y(0)._2)}.toList.sortBy(_._2).map(_._1).toArray
+println(if (result.isEmpty) "-1" else result.mkString(" "))
+
 /*Problem Statement
 
 Given a list of N integers A = [a1, a2, ..., aN], you have to find those integers which are repeated at least K times. In case no such element exists you have to print -1.
