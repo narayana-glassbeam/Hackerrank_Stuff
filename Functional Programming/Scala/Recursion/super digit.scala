@@ -10,6 +10,36 @@ object Solution {
     }
 }
 
+//other solutions
+//awesome solution
+object Solution{
+    def main(args:Array[String]){
+        val Array(n, k) = readLine.split(" ");
+        val d = n.toCharArray.toList.map(_.toString.toLong).foldLeft(0L)(_+_);
+        println(ds(d * k.toLong));
+    }
+    def ds(n:Long):Long = {
+        if(n < 10) return n;
+        else return ds(n%10 + ds(n/10));
+    }
+}
+
+//nice one
+object Solution {
+  def superDigit(n: String, k: Int): Int = {
+    val remainder = n.toCharArray.map(_.asDigit).sum % 9
+    val res = (remainder * k) % 9
+    if(res == 0) 9 else res
+  }
+
+  def main(args: Array[String]) {
+    val in = io.StdIn.readLine.split(" ")
+    val n = in(0)
+    val k = in(1).toInt
+    print(superDigit(n, k))
+  }
+}
+
 /*Problem Statement
 
 We define super digit of an integer x using the following rules:
