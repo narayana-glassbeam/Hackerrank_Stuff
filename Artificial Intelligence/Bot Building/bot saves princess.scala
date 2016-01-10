@@ -15,6 +15,5 @@ object Solution {
         else for(_ <- 0 until vertical) println("UP")
         if(horizontal < 0) for(_ <- horizontal until 0) println("RIGHT")
         else for(_ <- 0 until horizontal) println("LEFT")
-            }
-
+        }
 }
