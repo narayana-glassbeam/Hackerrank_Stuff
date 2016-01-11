@@ -18,6 +18,21 @@ object Solution {
     }
 }
 
+//other solution, interesting point how he read the lines
+object Solution {
+    def main(args: Array[String]) {
+       val matrix = io.Source.stdin.getLines.map(_.split(" ").map(_.toInt).toArray).toArray
+       var sum = -999999999
+       for (i <- 0 to 3) {
+         for (j <- 0 to 3) {
+           var itemSum = matrix(i)(j) + matrix(i)(j+1) + matrix(i)(j+2) + matrix(i+1)(j+1) + matrix(i+2)(j) + matrix(i+2)(j+1) + matrix(i+2)(j+2)
+           if (itemSum > sum) sum = itemSum
+         }
+       }
+      println(sum)
+    }
+}
+
 /*Problem Statement
 
 You are given a 2D array with dimensions 6*6. An hourglass in an array is defined as a portion shaped like this:
