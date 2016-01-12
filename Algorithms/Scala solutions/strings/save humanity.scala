@@ -19,8 +19,6 @@ object Solution {
         }
         indexes.toString.split(' ').toList
     }
-
-
     def matchVirus(word: String, virus: String): Boolean = {
         if (word==virus) true
         else {
@@ -37,6 +35,37 @@ object Solution {
     }
 
 }
+
+//this one times out on 5/10 test cases
+object Solution {
+    def main(args: Array[String]) {
+        for (_ <- 0 until readInt) {
+            val info = readLine.split(" ")
+            val patientDNA = info(0)
+            val virusDNA = info(1)
+            val solve = findIndexes(patientDNA, virusDNA, virusDNA.length)
+            println(if(solve.isEmpty) "No Match!" else solve)
+        }
+
+    }
+    def findIndexes (word: String, virus: String, size: Int ) : String = {
+        val indexes = StringBuilder.newBuilder
+        for (i <- 0 to word.length-size) {
+            if (equals(word.substring(i,size+i),virus)) indexes.append(i+" ")
+        }
+        indexes.toString
+    }
+    def equals(s1: String, s2: String): Boolean = {
+        if (s1==s2) return true
+        var count = 0
+        for(i <- 0 until s2.length) {
+            if (s1(i)!=s2(i)) count+=1
+            if (count>1) return false
+        }
+        true
+    }
+}
+
 /*Problem Statement
 
 Oh!! Mankind is in trouble again. This time it's a deadly disease spreading at a rate never seen before. The need of the hour is to set up efficient virus detectors. You are the lead at Central Hospital and need to find a fast and reliable way to detect the 'foot-prints' of the virus DNA in that of the patient.
