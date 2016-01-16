@@ -36,11 +36,12 @@ object Solution {
   def lcm(a: BigInt, b: BigInt): BigInt = {
     (a * b) / a.gcd(b)
   }
-  def gcd(a: BigInt, b: BigInt): BigInt = {
-    if (a. == 0) b
-    else gcd(b % a, a)
-  }
 }
+//my implementation of his/her 'solve' method
+ def solve(num: List[BigInt]): BigInt = num match {
+    case h1::h2::t => solve(List(lcm(h1, h2)) ::: t )
+    case _ => num.head
+  }
 
 //similar
 object Solution {
