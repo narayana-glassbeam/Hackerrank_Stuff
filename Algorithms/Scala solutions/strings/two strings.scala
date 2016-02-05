@@ -5,6 +5,37 @@ object Solution {
         }
     }
 }
+//could have also used
+readLine.intersect(readLine).isEmpty
+
+//other solutions
+object Solution {
+    def main(args: Array[String]) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        val cases = readInt
+        for (x <- 0 until cases) {
+            println(if (hasCommonSubString(readLine, readLine)) "YES" else "NO")
+        }
+    }
+
+    def hasCommonSubString(s1: String, s2: String): Boolean = {
+        val symbolCount1 = symbolCount(s1)
+        val symbolCount2 = symbolCount(s2)
+
+        for (x <- 0 until symbolCount1.length) {
+            if (symbolCount1(x) > 0 && symbolCount2(x) > 0) return true
+        }
+
+        false
+    }
+
+    def symbolCount(s: String):Array[Int] = {
+        val arr = new Array[Int](26)
+        s.foreach(x => arr(x - 'a') += 1)
+        arr
+    }
+
+}
 
 /*You are given two strings, A and B. Find if there is a substring that appears in both A and B.
 
