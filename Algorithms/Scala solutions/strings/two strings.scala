@@ -8,6 +8,23 @@ object Solution {
 //could have also used
 readLine.intersect(readLine).isEmpty
 
+//my other solution
+object Solution {
+    def main(args: Array[String]) {
+        val letters = 'a' to 'z'
+
+        for (_ <- 0 until readInt) {
+            var fifo = false
+            val s1 = readLine
+            val s2 = readLine
+            for (c <- letters if fifo==false) {
+                if (s1.contains(c) && s2.contains(c)) fifo = true
+            }
+            println(if(fifo) "YES" else "NO")
+        }
+    }
+}
+
 //other solutions
 object Solution {
     def main(args: Array[String]) {
