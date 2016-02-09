@@ -16,6 +16,8 @@ object Solution {
 
 //could have just used
 arr.indexOf(wanted)
+//or
+arr.zipWithIndex.find(x=> x._1==wanted).get._2
 
 /*This is a simple challenge to get things started. Given a sorted array (ar) and a number (V), can you print the index location of V in the array?
 
