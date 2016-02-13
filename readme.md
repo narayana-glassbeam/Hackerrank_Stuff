@@ -1,2 +1,10 @@
-My Hacks for Hackerrank Algorithms domain (C#,Scala) and Functional Programming (Scala)
-Feel free to fork and add your own languages and solutions
+My Hacks for
+##Hackerrank Algorithms domain (Scala, C#, Javascript, Ruby)
+##Hackerrank Functional Programming domain (Scala)
+##Hackerrank Artificial Intelligence (Scala)
+##Hackerrank Data Structures (Scala, Java)
+
+##CodeWars Solutions
+##Hackerearth Solutions
+
+#many more
