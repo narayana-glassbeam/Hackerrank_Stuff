@@ -9,6 +9,22 @@ object Solution {
     }
 }
 
+//my other solution
+object Solution {
+    def main(args: Array[String]) {
+            val size = readInt
+            val arr = readLine.split(" ").map(_.toInt)
+            val pivot = arr(0)
+            val (left,right) = partitioner(pivot,arr)
+            val result = left++right
+            result.foreach(n=> print(n+" "))
+    }
+
+    def partitioner(pivot: Int, arr: Array[Int]): (Array[Int],Array[Int]) = {
+       (arr.filter(_<pivot),arr.filter(_>=pivot))
+    }
+}
+
 //other solutions
 var l = List.empty[Int]
 var r = List.empty[Int]
