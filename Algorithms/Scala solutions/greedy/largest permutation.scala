@@ -45,3 +45,15 @@ object Solution {
       loop(arr,k,0)
     }
 }
+
+/*You are given an array of NN integers which is a permutation of the first NN natural numbers. You can swap any two elements of the array. You can make at most KK swaps. What is the largest permutation, in numerical order, you can make?
+
+Input Format
+The first line of the input contains two integers, NN and KK, the size of the input array and the maximum swaps you can make, respectively. The second line of the input contains a permutation of the first NN natural numbers.
+
+Output Format
+Print the lexicographically largest permutation you can make with at most KK swaps.
+
+Constraints
+1≤N≤1051≤N≤105
+1≤K≤109*/
