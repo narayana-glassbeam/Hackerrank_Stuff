@@ -46,6 +46,27 @@ object Solution {
     }
 }
 
+//fully working solution
+object Solution {
+    def main(args: Array[String]) {
+        val Array(n,k) = readLine.split(" ").map(_.toInt)
+        val arrA = readLine.split(" ").map(_.toInt)
+        val arrB = Array.fill(n + 1)(0)
+        for(i <- arrA.indices) arrB(arrA(i)) = i
+        var curr = k
+        for (i <- 0 until n if curr>0) {
+            if(arrA(i)<n-i) {
+                arrA(arrB(n - i)) = arrA(i)
+                arrB(arrA(i)) = arrB(n - i)
+                arrA(i) = n - i
+                arrB(n - i) = i
+                curr -= 1
+            }
+        }
+        println(arrA.mkString(" "))
+    }
+}
+
 /*You are given an array of NN integers which is a permutation of the first NN natural numbers. You can swap any two elements of the array. You can make at most KK swaps. What is the largest permutation, in numerical order, you can make?
 
 Input Format
