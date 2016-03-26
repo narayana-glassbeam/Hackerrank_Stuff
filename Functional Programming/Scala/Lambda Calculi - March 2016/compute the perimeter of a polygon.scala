@@ -16,3 +16,21 @@ object Solution {
         return Math.hypot(x1-x2,y1-y2)
     }
 }
+
+/*You are given the cartesian coordinates of a set of points in a 2D2D plane. When traversed sequentially, these points form a Polygon, PP, which is not self-intersecting in nature. Can you compute the perimeter of polygon PP?
+
+Input Format
+
+The first line contains an integer, NN, denoting the number of points.
+The NN subsequent lines each contain 22 space-separated integers denoting the respective xx and yy coordinates of a point.
+
+Constraints
+
+No 22 points are coincident, and polygon PP is obtained by traversing the points in a clockwise direction.
+3≤N≤10003≤N≤1000
+0≤x,y≤10000≤x,y≤1000
+Output Format
+
+For each test case, print the perimeter of PP (correct to a scale of one decimal place).
+
+Note: Do not add any leading/trailing spaces or units.*/
