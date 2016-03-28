@@ -1,5 +1,4 @@
 ###My Hacks for
-
 1. Hackerrank:
     * Hackerrank Algorithms domain (Scala, C#, Javascript, Ruby)
     * Hackerrank Functional Programming domain (Scala)
