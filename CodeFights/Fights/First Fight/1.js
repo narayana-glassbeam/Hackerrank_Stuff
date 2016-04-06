@@ -1,3 +1,5 @@
+//COMMENT: I actually started this (first) code fight by accident, after half an hour I noticed that I was "fighting" and that's why I needed more time, and also to get familiar how everything goes, nontheless I won (luckily)
+
 //SOLVED:
 function angleType(measure) {
 
