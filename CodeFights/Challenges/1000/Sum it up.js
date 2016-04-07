@@ -1,11 +1,11 @@
-function SumItUp(n, k) {
-    var r = 0;
-    for (var i = 1;i<=k;i++) {
+SumItUp=(n, k)=> {
+    r=0,i=1
+    while (i<=k) {
         r+=Array.from(new Array(n+1), (x,j) => j+i).reduce((a,b)=>a*b)
+        i++
     }
-    return r;
+    return r
 }
-
 
 /*
 Let s(n, k) = sum[r * (r + 1) * (r + 2) * ... * (r + n)] where r runs from 1 to k.
