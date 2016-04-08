@@ -6,8 +6,9 @@
     * Hackerrank Data Structures (Scala, Java)
     * Hackerrank Java Domain
 2. CodeWars solutions
-3. Hackerearth solutions
-4. Codeeval solutions
-5. Kattis solutions
-6. Codility solutions
-7. many more...
+3. CodeFights solutions
+4. Hackerearth solutions
+5. Codeeval solutions
+6. Kattis solutions
+7. Codility solutions
+8. many more...
